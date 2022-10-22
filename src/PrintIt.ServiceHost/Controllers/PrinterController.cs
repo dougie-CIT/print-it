@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PrintIt.Core;
 
 namespace PrintIt.ServiceHost.Controllers
@@ -26,6 +26,7 @@ namespace PrintIt.ServiceHost.Controllers
         [Route("install")]
         public IActionResult InstallPrinter([FromQuery] string printerPath)
         {
+          
             _printerService.InstallPrinter(printerPath);
             return Ok();
         }
